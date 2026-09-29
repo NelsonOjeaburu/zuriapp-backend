@@ -1,0 +1,7 @@
+# CVE-2026-73566 (node-tar, medium severity): confirmed via `npm audit` and
+# `npm ls tar --all` that this is NOT a dependency of this project. It ships
+# bundled inside npm's own internal tooling within the official node:20-alpine
+# base image (verified: tar 6.2.1 inside the image; fix requires tar >=7).
+# Not fixable from this repository. Accepted and tracked for re-check on the
+# next node:20-alpine image update.
+CVE-2026-73566
