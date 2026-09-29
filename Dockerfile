@@ -6,6 +6,8 @@ FROM node:20-alpine
 
 WORKDIR /app
 
+RUN apk update && apk upgrade --no-cache
+
 # Copy package files first, install, THEN copy the rest of the source.
 # This ordering matters: Docker caches each layer. As long as package.json
 # doesn't change, Docker reuses the cached `npm ci` layer on every rebuild,
