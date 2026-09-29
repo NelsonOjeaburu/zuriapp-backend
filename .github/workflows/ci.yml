@@ -50,6 +50,7 @@ jobs:
           exit-code: '1'
           severity: CRITICAL,HIGH
           trivyignores: .trivyignore
+          skip-dirs: /usr/local/lib/node_modules/npm
           ignore-unfixed: true
 
       # Everything below only runs for real pushes to main, never for a PR.
